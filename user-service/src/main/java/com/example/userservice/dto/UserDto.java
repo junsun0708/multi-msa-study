@@ -1,6 +1,9 @@
 package com.example.userservice.dto;
 
 import java.util.Date;
+import java.util.List;
+
+import com.example.userservice.vo.ResponseOrder;
 
 //import com.example.userservice.vo.ResponseOrder;
 
@@ -14,5 +17,5 @@ public class UserDto {
     private String userId;
     private Date createdAt;
     private String encryptedPwd;
-    //private List<ResponseOrder> orders;
+    private List<ResponseOrder> orders;
 }
