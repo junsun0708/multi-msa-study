@@ -36,6 +36,17 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka
-      
+ 
+logging:
+  level:
+    '[com.example.userservice]' : DEBUG
+          
 greeting:
-  message: Welcome to the Simple E-commerce.      
+  message: Welcome to the Simple E-commerce.
+  
+token:
+  expiration_time: 86400000
+  secret: user_token  
+        
+  
+  
