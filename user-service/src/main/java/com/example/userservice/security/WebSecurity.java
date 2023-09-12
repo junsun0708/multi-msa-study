@@ -28,9 +28,12 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
         //http.authorizeRequests().antMatchers("/users/**").permitAll();
-        http.authorizeRequests().antMatchers("/**")
+        http.authorizeRequests()
+        .antMatchers("/error/**").permitAll() //getRemoteAddr()
+        .antMatchers("/**")
         //.hasIpAddress(env.getProperty("192.168.32.1")) // <- IP 변경
         .hasIpAddress("192.168.32.1") // <- IP 변경
+        //.access("hasIpAddress('192.168.32.1')")
         .and()
         .addFilter(getAuthenticationFilter());
         
