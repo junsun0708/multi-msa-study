@@ -11,16 +11,16 @@ spring:
 #    password: guest
 #  profiles:
 #    active: native
+#  config:
+#    import : optional:config-service:http://localhost:8888
   cloud:
     config:
+#      name : ecommerce
       server:
         git:
-          #          uri: file:///Users/dowonlee/Desktop/Work/git-local-repo
-#          uri: https://github.com/joneconsulting/spring-cloud-config
-        uri: https://github.com/junsun0708/multi-msa-study/git-local-repo
-        #          basedir: /Users/dowonlee/Desktop/Work/tmp/config-repo
-        #          username: [username]
-        #          password: [password]
+          uri: file:///d:\\workSpace2\\multi-msa-study\\git-local-repo
+          #http://localhost:8888/ecommerce/default
+
 #        native:
 #          search-locations: file:///Users/dowonlee/Desktop/Work/native-file-repo
 #
