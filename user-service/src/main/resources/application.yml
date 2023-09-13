@@ -21,7 +21,15 @@ spring:
   cloud:
     config:
       name : ecommerce
-    
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans
+        #http://desktop-fhh3fja:60723/actuator/beans
+        #http://desktop-fhh3fja:60723/actuator/health
+        #http://desktop-fhh3fja:60723/actuator/refresh (git-local-repo 환경변수 변경 add commit, postman post왼쪽 주소, 변경된값 적용
 #  datasource:
 #    hikari:
 #      jdbc-url: jdbc:h2:tcp://localhost/~/test
