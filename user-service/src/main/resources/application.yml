@@ -14,7 +14,14 @@ spring:
   datasource:
     url : jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
-      
+
+    #부트스트랩 대신에 이렇게 설정만 추가하면 됨. boot 2.4 이후 //유저서비스에서 config-server를 연결하는 정보
+  config:
+    import : optional:configserver:http://localhost:8888
+  cloud:
+    config:
+      name : ecommerce
+    
 #  datasource:
 #    hikari:
 #      jdbc-url: jdbc:h2:tcp://localhost/~/test
@@ -44,9 +51,9 @@ logging:
 greeting:
   message: Welcome to the Simple E-commerce.
   
-token:
-  expiration_time: 86400000
-  secret: user_token  
+#token:
+#  expiration_time: 86400000
+#  secret: user_token
         
   
   

@@ -32,8 +32,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         .antMatchers("/error/**").permitAll() //getRemoteAddr()
         .antMatchers("/**")
         //.hasIpAddress(env.getProperty("192.168.32.1")) // <- IP 변경
-        .hasIpAddress("192.168.32.1") // <- IP 변경
-        //.access("hasIpAddress('192.168.32.1')")
+        //.hasIpAddress("192.168.32.1") // <- IP 변경
+        .access("hasIpAddress('172.30.1.7')")
         .and()
         .addFilter(getAuthenticationFilter());
         
