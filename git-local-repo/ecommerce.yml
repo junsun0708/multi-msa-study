@@ -1,5 +1,5 @@
 token:
-  expiration_time: 86400000
+  expiration_time: 76400000
   secret: user_token_ecommerce1
 
 gateway:

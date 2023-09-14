@@ -9,10 +9,16 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
 
+
+
 spring:                                                                                                                                                           
   application:
     name: apigateway-service
+  config:
+    import: optional:configserver:http://localhost:8888
   cloud:
+    config:
+      name: ecommerce
     gateway:
       default-filters:
         - name: GlobalFilter
@@ -85,8 +91,22 @@ spring:
             - RewritePath=/user-service/(?<segment>.*), /$\{segment}
             - AuthorizationHeaderFilter    
 
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/actuator/**
+            - Method=GET,POST
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
 token:
-  secret: user_token                
+  secret: user_token
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, httptrace
 #      default-filters:
 #        - name: GlobalFilter
 #          args:

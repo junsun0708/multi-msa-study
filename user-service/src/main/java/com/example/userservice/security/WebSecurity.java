@@ -35,7 +35,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         .antMatchers("/**")
         //.hasIpAddress(env.getProperty("192.168.32.1")) // <- IP 변경
         //.hasIpAddress("192.168.32.1") // <- IP 변경
-        .access("hasIpAddress('172.30.1.7')")
+                // 게이트웨이 아이피라는데 이걸입력해야 유저서비스도 돌아감, ecommerce.yml의 gatewayip도 맞춰줘야 하는듯.
+        .access("hasIpAddress('10.0.2.21')")
         .and()
         .addFilter(getAuthenticationFilter());
         

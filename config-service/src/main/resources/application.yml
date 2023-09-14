@@ -18,7 +18,7 @@ spring:
 #      name : ecommerce
       server:
         git:
-          uri: file:///d:\\workSpace2\\multi-msa-study\\git-local-repo
+          uri: file:///d:\\workSpace7\\multi-msa-study\\git-local-repo
           #http://localhost:8888/ecommerce/default
 
 #        native:
