@@ -3,4 +3,4 @@ token:
   secret: user_token_ecommerce1
 
 gateway:
-  ip: 172.30.1.7
+  ip: 10.0.2.21
