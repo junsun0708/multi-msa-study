@@ -4,22 +4,41 @@ server:
 spring:
   application:
     name: config-service
-#  rabbitmq:
-#    host: 127.0.0.1
-#    port: 5672
-#    username: guest
-#    password: guest
-#  profiles:
-#    active: native
+
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+  profiles:
+    active:  native #환경변수를 native로 가져옴, profiles를 삭제하면 git에서 가져옴.
 #  config:
 #    import : optional:config-service:http://localhost:8888
   cloud:
     config:
 #      name : ecommerce
       server:
+        native:
+          search-locations: file:///d:\\workSpace7\\multi-msa-study\\git-local-repo
         git:
-          uri: file:///d:\\workSpace7\\multi-msa-study\\git-local-repo
+          #uri: file:///d:\\workSpace7\\multi-msa-study\\git-local-repo
+          uri: https://github.com/junsun0708/spring-cloud-config.git
           #http://localhost:8888/ecommerce/default
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh
+
+#  config:
+#    import : optional:configserver:http://localhost:8888
+#  cloud:
+#    config:
+#      name : ecommerce
+#  profiles:
+#    active: dev
 
 #        native:
 #          search-locations: file:///Users/dowonlee/Desktop/Work/native-file-repo

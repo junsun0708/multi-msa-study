@@ -14,13 +14,20 @@ eureka:
 spring:                                                                                                                                                           
   application:
     name: apigateway-service
+
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
   config:
     import: optional:configserver:http://localhost:8888
   cloud:
     config:
       name: ecommerce
-  profiles:
-    active: dev
+#  profiles:
+#    active: dev
 
     gateway:
       default-filters:
@@ -109,7 +116,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh, health, beans, httptrace
+        include: refresh, health, beans, httptrace, busrefresh
 #      default-filters:
 #        - name: GlobalFilter
 #          args:

@@ -5,6 +5,13 @@ server:
 spring:
   application:
     name : user-service
+
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
   h2:
     console:
       enabled: true
@@ -21,14 +28,14 @@ spring:
   cloud:
     config:
       name : ecommerce
-  profiles:
-    active: dev
+#  profiles:
+#    active: dev
 
 management:
   endpoints:
     web:
       exposure:
-        include: refresh, health, beans
+        include: refresh, health, beans, busrefresh
         #http://desktop-fhh3fja:60723/actuator/beans
         #http://desktop-fhh3fja:60723/actuator/health
         #http://desktop-fhh3fja:60723/actuator/refresh (git-local-repo 환경변수 변경 add commit, postman post왼쪽 주소, 변경된값 적용
