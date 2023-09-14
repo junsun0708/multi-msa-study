@@ -21,6 +21,8 @@ spring:
   cloud:
     config:
       name : ecommerce
+  profiles:
+    active: dev
 
 management:
   endpoints:

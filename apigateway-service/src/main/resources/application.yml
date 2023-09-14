@@ -19,6 +19,9 @@ spring:
   cloud:
     config:
       name: ecommerce
+  profiles:
+    active: dev
+
     gateway:
       default-filters:
         - name: GlobalFilter
