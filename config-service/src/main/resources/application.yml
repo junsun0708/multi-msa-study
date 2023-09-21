@@ -23,7 +23,7 @@ spring:
           search-locations: file:///d:\\workSpace7\\multi-msa-study\\git-local-repo
         git:
           #uri: file:///d:\\workSpace7\\multi-msa-study\\git-local-repo
-          uri: https://github.com/junsun0708/spring-cloud-config.git
+          uri: https://github.com/j뽐뿌unsun0708/spring-cloud-config.git
           #http://localhost:8888/ecommerce/default
 
 management:
@@ -32,6 +32,9 @@ management:
       exposure:
         include: health, busrefresh
 
+
+encrypt:
+  key: dpgsdjboertj234j32hccd24
 #  config:
 #    import : optional:configserver:http://localhost:8888
 #  cloud:
