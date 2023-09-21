@@ -1,6 +1,7 @@
 token:
   expiration_time: 76400000
-  secret: my_token_local_changed2
+  #secret: my_token_local_changed2
+  secret: '{cipher}AQAyAkBIIs0Fy8Vsu8TxeCio+kxTOXGOQr4OsehM5z5C957gyyHDhTD/d3/qpC8X6UcVHd2cvNXH+qOLERfrEVwEGBqS7ENhiyYS96Eh4EDFtxnt0gEZv7nIan6CQN/CVGWYj5wgdOPDDnJO3CXM+SVZ6Qi9ga8GGQZGzK5DtCAoLHvoaZpPJgy8c2NCTc8YzSk0gBaJo87u8ZQaucR5xJio0nu4mk/yN1f2IckcKQhfzvTdJL2vDsxm63hyx6OseHrPI8xPBtJojDHhxEv+tccK2Hh3CFWYJXvptIVqR9CQiJB71F3bL65zs4W1jDXj9c9hmxmFaxBQydP38r80N2J/HNfGzlcVkFsdeK3+fVhMmqmQvpzqkFih/fjC+uMQ18FC/K2T+Y06bykIORMPuMk8'
 
 gateway:
   ip: 10.0.2.21

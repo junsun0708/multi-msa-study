@@ -34,7 +34,11 @@ management:
 
 
 encrypt:
-  key: dpgsdjboertj234j32hccd24
+  #key: dpgsdjboertj234j32hccd24
+  key-store:
+    location: file:///d:\\workSpace7\\multi-msa-study\\keystore\\apiEncryptionKey.jks
+    password: test1234
+    alias: apiEncryptionKey
 #  config:
 #    import : optional:configserver:http://localhost:8888
 #  cloud:
